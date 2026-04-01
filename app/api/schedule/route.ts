@@ -5,8 +5,8 @@ export async function GET() {
     const now = new Date().toISOString();
 
     const res = await fetch(
-        `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${now}`,
-        { next: {revalidate:300 } }
+        `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true`,
+        { next: {revalidate:10 } } // change to 300 on deployment
     );
 
     const data = await res.json();

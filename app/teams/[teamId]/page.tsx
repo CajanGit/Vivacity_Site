@@ -53,10 +53,10 @@ const upcomingMatches = teamMatches
 
 const pastMatches = teamMatches
   .filter((match: any) => new Date(match.scheduledAt) <= now)
-  .sort((a: any, b: any) => new Date(a.scheduledAt).getTime() - new Date(b.scheduledAt).getTime())
+  .sort((a: any, b: any) => new Date(b.scheduledAt).getTime() - new Date(a.scheduledAt).getTime())
 
-
-
+  console.log("url", teamMatches.map((m: any) => m.faceitUrl));
+  console.log("teamMatches:", teamMatches);
   return (
     // <div className="p-8">
     //   <img src={team.avatar} alt={team.name} className="w-24 h-24 rounded-full" />
@@ -103,8 +103,20 @@ const pastMatches = teamMatches
           <ul>
             {upcomingMatches.map((match: any) => (
               <li key={match.eventId} className="mb-4">
-                <p className="font-semibold">vs {match.opponentName}</p>
+                <p className="font-semibold">
+                  vs {" "}
+                  {match.faceitUrl ? (
+                    <a href={match.faceitUrl} target="_blank" className="underline hover:text-purple-400">
+                      {match.opponentName}
+                    </a>
+                  ) : (
+                    match.opponentName
+                  )}
+                </p>
                 <LocalTime dateString={match.scheduledAt} />
+                {match.score && (
+                  <p>{match.score.us} - {match.score.them}</p>
+                )}
                 {match.isStreamed && match.streamUrl && (
                   <a href={match.streamUrl} target="_blank" className="text-purple-400 underline ml-2">
                     Watch Live
@@ -119,8 +131,25 @@ const pastMatches = teamMatches
         <ul>
           {pastMatches.map((match: any) => (
             <li key={match.eventId} className="mb-4">
-              <p className="font-semibold">vs {match.opponentName}</p>
+              <p className="font-semibold">
+                vs {" "}
+                {match.faceitUrl ? (
+                  <a href={match.faceitUrl} target="_blank" className="underline hover:text-purple-400">
+                    {match.opponentName}
+                  </a>
+                ) : (
+                  match.opponentName
+                )}
+              </p>
               <LocalTime dateString={match.scheduledAt} />
+              {match.score && (
+                <p>{match.score.us} - {match.score.them}</p>
+              )}
+              {match.isStreamed && match.streamUrl && (
+                  <a href={match.streamUrl} target="_blank" className="text-purple-400 underline ml-2">
+                    Watch Live
+                  </a>
+                )}
               {/* {match.result && (
                 <p>{match.result.us} - {match.result.them}</p>
               )} */}
