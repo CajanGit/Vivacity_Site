@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import AuthButton from '@/app/components/AuthButton'
 
 export default function Navbar() {
   return (
@@ -30,6 +31,7 @@ export default function Navbar() {
               About
             </Link>
           </li>
+          <AuthButton />
         </ul>
       </div>
     </nav>
