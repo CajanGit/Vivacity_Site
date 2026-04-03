@@ -46,6 +46,7 @@
 
 import Link from "next/link";
 import { TEAMS } from "@/lib/teamIds";
+import { getTeam } from "@/lib/faceit";
 
 type Team = {
   team_id: string
@@ -54,12 +55,18 @@ type Team = {
 };
 
 export default async function TeamsPage() {
-  console.log(TEAMS.map(({ teamId }) => teamId));
-  const teams: Team[] = await Promise.all(
-    TEAMS.map(( { teamId }) =>
-      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/team/${teamId}`).then((r) => r.json())
-    )
+  const teams:Team[] = await Promise.all(
+    TEAMS.map(({ teamId }) => getTeam(teamId))
   );
+
+
+// export default async function TeamsPage() {
+//   console.log(TEAMS.map(({ teamId }) => teamId));
+//   const teams: Team[] = await Promise.all(
+//     TEAMS.map(( { teamId }) =>
+//       fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/team/${teamId}`).then((r) => r.json())
+//     )
+//   );
 
   return (
     <div className="grid grid-cols-3 gap-6 p-8">
