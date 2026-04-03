@@ -1,8 +1,9 @@
 import {TEAM_ROSTER} from "@/lib/roster";
 import { TEAMS } from "@/lib/teamIds";
-// import { MATCHES } from "@/lib/matches";
 import { parseCalendarEvent } from "@/lib/parseMatch"
 import LocalTime from "@/app/components/LocalTime";
+import { getTeam, getSchedule } from "@/lib/faceit";
+
 // app/teams/[teamId]/page.tsx
 type Member = {
   user_id: string;
@@ -19,16 +20,11 @@ type Team = {
 
 export default async function TeamPage({ params }: { params: Promise<{ teamId: string }> }) {
   const { teamId } = await params;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/team/${teamId}`);
+  
+  const team: Team = await getTeam(teamId);
+  const scheduleData = await getSchedule();
 
-    // CHANGED - fetch from Google Calendar instead of hardcoded matches
-  const scheduleRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule`);
-  const scheduleData = await scheduleRes.json();
-  console.log(scheduleData);
   const now = new Date();
-  // const teamMatches = MATCHES[teamId] ?? [];
-  const team: Team = await res.json();
-  console.log(team);
 
   const filteredMembers = team.members.filter(
   (member) => TEAM_ROSTER[member.user_id]
