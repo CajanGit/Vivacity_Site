@@ -9,7 +9,8 @@ export async function signInWithDiscord() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'discord',
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/callback`,
+      redirectTo: `https://your-project.vercel.app/api/auth/callback`,
+      // redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/callback`,
     },
   })
 
@@ -26,8 +27,3 @@ export async function signOut() {
   await supabase.auth.signOut()
   redirect('/')
 }
-// ```
-
-// // Add one more line to your `.env.local`:
-// // ```
-// // NEXT_PUBLIC_SITE_URL=http://localhost:3000
