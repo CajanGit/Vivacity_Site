@@ -9,7 +9,7 @@ export async function signInWithDiscord() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'discord',
     options: {
-      redirectTo: `https://your-project.vercel.app/api/auth/callback`,
+      redirectTo: `https://vivacity-omega.vercel.app/api/auth/callback`,
       // redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/callback`,
     },
   })
