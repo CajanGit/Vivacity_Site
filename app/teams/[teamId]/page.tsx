@@ -1,5 +1,5 @@
 import {TEAM_ROSTER} from "@/lib/roster";
-import { TEAMS } from "@/lib/teamIDs";
+import { TEAMS } from "@/lib/teamIds";
 // import { MATCHES } from "@/lib/matches";
 import { parseCalendarEvent } from "@/lib/parseMatch"
 import LocalTime from "@/app/components/LocalTime";

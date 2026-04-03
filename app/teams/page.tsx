@@ -45,7 +45,7 @@
 // }
 
 import Link from "next/link";
-import { TEAMS } from "@/lib/teamIDs";
+import { TEAMS } from "@/lib/teamIds";
 
 type Team = {
   team_id: string
