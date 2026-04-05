@@ -6,7 +6,7 @@ export async function GET() {
 
     const res = await fetch(
         `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true`,
-        { next: {revalidate:10 } } // change to 300 on deployment
+        { next: {revalidate:300 } } // change to 300 on deployment
     );
 
     const data = await res.json();

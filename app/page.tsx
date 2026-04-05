@@ -9,7 +9,7 @@ export default function Home() {
       <main className="flex gap-30 justify-center flex-wrap">
         <TeamCard image="/images/team1.jpg" label="Teams" />
         <TeamCard image="/images/team1.jpg" label="Socials" />
-        <TeamCard image="/images/team1.jpg" label="Schedules" />
+        <TeamCard image="/images/team1.jpg" label="Coaching" />
       </main>
     </div>
   
