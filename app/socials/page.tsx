@@ -1,15 +1,23 @@
 // import Navbar from "@/app/components/Navbar"
-import {
-    Twitter
-} from 'lucide-react';
+import { 
+    SiX
+} from '@icons-pack/react-simple-icons';
 
+import { SocialMediaCard} from '@/app/components/SocialMediaCard';
 
-const socialLinks = {
+const socialLinks = [
 
-    icon: Twiter,
-    name: 
+{
+
+    icon: SiX,
+    name: 'Twitter/X',
+    handle:'@test',
+    url: 'https://x.com/VivacityOW',
+    color: '#1DA1F2'
+    
 }
-export default function socialsPage(){
+]
+export default function app(){
 
     return (
 
@@ -46,7 +54,7 @@ export default function socialsPage(){
       {/* Social Media Cards */}
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {/* {socialLinks.map((social) => (
+          {socialLinks.map((social) => (
             <SocialMediaCard
               key={social.name}
               icon={social.icon}
@@ -55,7 +63,7 @@ export default function socialsPage(){
               url={social.url}
               color={social.color}
             />
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
