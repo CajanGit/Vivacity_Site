@@ -5,12 +5,21 @@ import AuthButton from '@/app/components/AuthButton'
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-700 text-white p-4 shadow-lg">
-      <div className="max-w-8xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold hover:text-blue-100">
-          Vivacity Esports
+    <nav className="bg-[#111314] text-white shadow-lg">
+      <div className="max-w mx-auto px-10 h-[60px] flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+          <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-20 h-20 object-contain" />
+          <span className="text-[#00D4F5] text-4xl font-bold tracking-wide"> Vivacity Esports </span>
         </Link>
-        <ul className="flex gap-6">
+        <div className="flex items-center gap-10">
+          <Link href="/" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors">Home</Link>
+          <Link href="/teams" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors">Teams</Link>
+          <Link href="/socials" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors">Socials</Link>
+          <Link href="/coaching" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors">Coaching</Link>
+          <div className="w-px h-[18px] bg-white/10"/>
+          <AuthButton />
+        </div>
+        {/* <ul className="flex gap-6">
           <li>
             <Link href="/" className="hover:text-blue-100">
               Home
@@ -31,8 +40,10 @@ export default function Navbar() {
               About
             </Link>
           </li>
-          <AuthButton />
-        </ul>
+          <li>
+            <AuthButton/>
+          </li>
+        </ul> */}
       </div>
     </nav>
   );

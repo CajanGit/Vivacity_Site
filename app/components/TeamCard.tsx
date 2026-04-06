@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TeamCard({ image, label }: { image: string; label: string }) {
   return (
-    <div className="group relative w-125 h-64 rounded-xl overflow-hidden cursor-pointer
+    <div className="border border-white/50 hover:border-[#00D4F5] group relative w-125 h-64 rounded-xl overflow-hidden cursor-pointer
                     transition-all duration-300 ease-in-out
                     hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50">
       
@@ -21,7 +21,7 @@ export default function TeamCard({ image, label }: { image: string; label: strin
       <div className="absolute inset-0 items-center p-4 
                       bg-gradient-to-t from-black/70 to-transparent flex justify-center ">
         
-        <p className="text-white text-4xl font-bold ">{label}</p>
+        <p className="text-white hover:text-[#00D4F5] text-4xl font-bold ">{label}</p>
         
         
       </div>
