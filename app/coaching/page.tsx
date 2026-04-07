@@ -7,7 +7,7 @@ export default async function CoachingPage() {
   const rest = coaches.filter(c => !c.featured)
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
+    <main className="max-w-6xl min-h-screen mx-auto px-4 py-12 overflow-hidden">
       <h1 className="text-4xl font-bold text-white mb-2">Coaching Hub</h1>
       <p className="text-gray-400 mb-10">
         Work with Vivacity-verified coaches to level up your game.
