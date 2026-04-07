@@ -26,8 +26,8 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center text-center min-h-[50vh] px-8 py-20 overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-5 pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-5 pointer-events-none" />
+        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-30 pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-30 pointer-events-none" />
 
         <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-32 h-32 object-contain mb-6 relative z-10" />
 
@@ -35,7 +35,7 @@ export default function Home() {
           Welcome to <span className="text-[#00D4F5]">Vivacity</span>
         </h1>
         <p className="text-sm text-gray-500 max-w-sm leading-relaxed mb-8 relative z-10">
-          A aspiring Esports organization aiming to help players thrive as competitors and individuals.
+          An aspiring Esports organization aiming to help players thrive as competitors and individuals.
         </p>
         
         <a href="#sections"

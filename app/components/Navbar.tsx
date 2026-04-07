@@ -5,7 +5,7 @@ import AuthButton from '@/app/components/AuthButton'
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#111314] text-white shadow-lg">
+    <nav className="bg-black/40 text-white shadow-lg z-50">
       <div className="max-w mx-auto px-10 h-[60px] flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-20 h-20 object-contain" />
