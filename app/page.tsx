@@ -1,21 +1,3 @@
-// import TeamCard from './components/TeamCard'
-// export default function Home() {
-//   return (
-
-//     // flex = best for one direction at a time
-//     // grid = best for two dimesnions at once, rows + columns, etc
-    
-//     <div className="flex items-center pt-50">
-//       <main className="flex gap-30 justify-center flex-wrap">
-//         <TeamCard image="/images/ow_team_placeholder.png" label="Teams" />
-//         <TeamCard image="/images/socials_placeholder.png" label="Socials" />
-//         <TeamCard image="/images/ow_coaching_placeholder.jpg" label="Coaching" />
-//       </main>
-//     </div>
-  
-
-//   );
-// }
 
 import Image from 'next/image'
 import Link from 'next/link'

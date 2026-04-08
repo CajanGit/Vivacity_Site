@@ -154,7 +154,7 @@ const pastMatches = teamMatches
           <img src={team.avatar} alt={team.name} className="w-16 h-16 rounded-full border-2 border-white/10" />
           <div>
             <h1 className="text-4xl font-bold uppercase tracking-wide leading-none">{team.name}</h1>
-            <p className="text-xs text-white/40 uppercase tracking-widest mt-1">FACEIT · CS2</p>
+            <p className="text-xs text-white/40 uppercase tracking-widest mt-1">FACEIT · OW</p>
           </div>
         </div>
 

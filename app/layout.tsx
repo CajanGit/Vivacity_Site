@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vivacity",
   description: "An aspiring Esports organization helping players thrive.",
+  openGraph : {
+    title: "Vivacity",
+    description: "An aspiring Esports organization helping players thrive.",
+    images:["/images/logo_transparent.png"],
+  }
 };
 
 export const viewport = {
@@ -34,7 +39,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 w-full">
           {children}
         </main>
         <Footer/>
