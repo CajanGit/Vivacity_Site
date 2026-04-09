@@ -1,6 +1,9 @@
 // import Navbar from "@/app/components/Navbar"
 import { 
-    SiX
+    SiX,
+    SiInstagram,
+    SiTwitch,
+    SiYoutube
 } from '@icons-pack/react-simple-icons';
 
 import { SocialMediaCard} from '@/app/components/SocialMediaCard';
@@ -11,62 +14,87 @@ const socialLinks = [
 
     icon: SiX,
     name: 'Twitter/X',
-    handle:'@test',
+    handle:'@VivacityOW',
     url: 'https://x.com/VivacityOW',
     color: '#1DA1F2'
-    
+},
+{
+    icon: SiInstagram,
+    name: 'Discord',
+    handle:'@Vivacity.Esports',
+    url: 'https://www.instagram.com/vivacity.esports/',
+    color: '#1DA1F2'
+},
+{
+    icon: SiTwitch,
+    name: 'Twitch',
+    handle:'@Vivacity_Esports',
+    url: 'https://www.twitch.tv/vivacity_esports',
+    color: '#1DA1F2'
+},
+{
+    icon: SiYoutube,
+    name: 'Youtube',
+    handle:'@Vivacity_Esports',
+    url: 'https://www.youtube.com/@Vivacity_Esports',
+    color: '#1DA1F2'
 }
 ]
 export default function app(){
 
     return (
+    
+    
+    <div className="bg-[#111314] min-h-screen" >
 
-        <div className="min-h-screen bg-black">
-      {/* <Navbar /> */}
-      
-      {/* Hero Section with Background */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10" />
-        <div className="absolute inset-0 opacity-20">
-          {/* <ImageWithFallback
-            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&q=80"
-            alt="Esports background"
-            className="w-full h-full object-cover"
-          /> */}
-        </div>
-        
-        <div className="relative z-20 container mx-auto px-4 py-16 md:py-24">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              JOIN THE WAVE
-            </h1>
-            <p className="text-lg md:text-xl text-zinc-400 mb-2">
-              Connect with us across all platforms
-            </p>
-            <div className="flex items-center justify-center gap-2 text-sm text-zinc-500">
-              <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-              <span>Live and ready to compete</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Header */}
+      <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
+        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
 
-      {/* Social Media Cards */}
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+        <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
+          Connect On Our
+        </p>
+        <h1 className="text-4xl font-medium text-white mb-3 relative z-10">
+          Socials
+        </h1>
+        <p className="text-sm text-gray-500 max-w-sm leading-relaxed relative z-10">
+          Follow us across every platform. Stay close to the action.
+        </p>
+      </section>
+
+      <div className="h-px bg-white/5" />
+
+      {/* Social cards */}
+      <section className="px-6 py-16 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-4">
           {socialLinks.map((social) => (
-            <SocialMediaCard
+            <a
               key={social.name}
-              icon={social.icon}
-              name={social.name}
-              handle={social.handle}
-              url={social.url}
-              color={social.color}
-            />
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-6 rounded-xl border border-white/10 hover:border-[#00D4F5]/40 bg-[#0a0b0c] px-8 py-6 transition-colors"
+            >
+              {/* Icon */}
+              <social.icon className="w-6 h-6 text-gray-500 group-hover:text-[#00D4F5] transition-colors flex-shrink-0" />
+
+              {/* Text */}
+              <div className="flex-1 min-w-0">
+                <p className="text-white text-sm font-medium mb-0.5">{social.name}</p>
+              </div>
+
+              {/* Handle + arrow */}
+              <div className="flex items-center gap-3 flex-shrink-0">
+                <span className="text-xs text-gray-600 hidden sm:block">{social.handle}</span>
+                <span className="text-[#00D4F5] text-sm opacity-0 group-hover:opacity-100 transition-opacity">›</span>
+              </div>
+            </a>
           ))}
         </div>
-      </div>
+      </section>
+
     </div>
-    );
+  );
     
 }

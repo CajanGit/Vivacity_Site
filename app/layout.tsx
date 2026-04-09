@@ -3,6 +3,28 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar"
 import "./globals.css";
 import Footer from "./components/Footer";
+import localFont from 'next/font/local'
+
+const aquire = localFont({
+  src: [
+    {
+      path: '../public/fonts/AquireLight.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/AquireRegular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/AquireBold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-aquire',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={aquire.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />

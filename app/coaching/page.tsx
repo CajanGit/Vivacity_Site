@@ -13,18 +13,21 @@ export default async function CoachingPage() {
         Work with Vivacity-verified coaches to level up your game.
       </p>
 
+      <p className="font-aquire text-8xl flex items-center">
+        COMING SOON
+      </p>
       {/* Featured Coach */}
-      {featured && (
+      {/* {featured && (
         <div className="mb-12">
           <p className="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
             Featured Coach
           </p>
           <CoachCard coach={featured} featured />
         </div>
-      )}
+      )} */}
 
       {/* All Other Coaches */}
-      {rest.length > 0 && (
+      {/* {rest.length > 0 && (
         <div>
           <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-4">
             All Coaches
@@ -39,7 +42,7 @@ export default async function CoachingPage() {
 
       {coaches.length === 0 && (
         <p className="text-gray-500">No coaches available yet. Check back soon.</p>
-      )}
+      )} */}
     </main>
   )
 }

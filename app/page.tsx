@@ -14,7 +14,7 @@ export default function Home() {
         <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-32 h-32 object-contain mb-6 relative z-10" />
 
         <h1 className="text-4xl font-medium text-white mb-3 relative z-10">
-          Welcome to <span className="text-[#00D4F5]">Vivacity</span>
+          Welcome to <span className=" font-aquire text-[#00D4F5]">Vivacity</span>
         </h1>
         <p className="text-sm text-gray-500 max-w-sm leading-relaxed mb-8 relative z-10">
           An aspiring Esports organization aiming to help players thrive as competitors and individuals.
@@ -37,6 +37,7 @@ export default function Home() {
             alt="Teams"
             fill
             className="object-cover"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0c]/95 via-[#0a0b0c]/50 to-[#0a0b0c]/15" />
           <div className="relative z-10 p-12">

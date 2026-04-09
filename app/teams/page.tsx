@@ -57,7 +57,7 @@ export default async function TeamsPage() {
         <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-30 pointer-events-none" />
       {/* Page Header */}
         <div className="text-center mb-12">
-        <p className="text-[#00D4F5] text-lg font-bold tracking-[0.15em] uppercase mb-2">
+        <p className="font-aquire text-[#00D4F5] text-4xl font-bold tracking-[0.15em] uppercase mb-2">
           Vivacity Esports
         </p>
         <h1 className="text-3xl font-bold text-white tracking-tight">Our Teams</h1>
