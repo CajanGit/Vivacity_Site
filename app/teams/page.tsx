@@ -13,59 +13,26 @@ export default async function TeamsPage() {
     TEAMS.map(({ teamId }) => getTeam(teamId))
   );
 
-
-// export default async function TeamsPage() {
-//   console.log(TEAMS.map(({ teamId }) => teamId));
-//   const teams: Team[] = await Promise.all(
-//     TEAMS.map(( { teamId }) =>
-//       fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/team/${teamId}`).then((r) => r.json())
-//     )
-//   );
-
-  // return (
-  //   <div className="flex gap-10 p-10">
-  //     {teams.map((team) => (
-  //       <Link
-  //         key = {team.team_id}
-  //         href={`/teams/${team.team_id}`}
-  //         className="flex flex-col border border-white/40 items-center gap-3 p-10 min-h-[20vh] rounded-lg bg-transparent transition-transform duration-300 hover:scale-105 hover:bg-[#00D4F5]/30 hover:border-[#00D4F5]"
-  //       >
-  //         <img 
-  //           src={team.avatar}
-  //           alt={team.name}
-  //           className="w-24 h-24 rounded-full object-cover"
-  //         />
-  //         <span className="text-white font-semibold text-lg">{team.name}</span>
-  //       </Link>
-  //     ))}
-  //   </div>
-  // );
-  //   <div> 
-  //     {teams.map((team) => (
-  //       <Link key={team.team_id} href={`/teams/${team.team_id}`}>
-  //         <img src={team.avatar} alt={team.name} />
-  //         <span>{team.name}</span>
-  //       </Link>
-  //     ))}
-  //   </div>
-  // )
-
   return (
-    <div className="bg-[#111314] min-h-screen overflow-hidden">
-      <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-8 py-20">
-        <div className="absolute -bottom-20 -left-20 w-95 h-95 rounded-full bg-[#00D4F5] opacity-30 pointer-events-none" />
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-30 pointer-events-none" />
+    <div className="bg-[#111314] min-h-screen">
+
+      <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
+
+        <div className="absolute -bottom-20 -left-20 w-95 h-95 rounded-full bg-[#00D4F5] opacity-30 blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-30 blur-3xl pointer-events-none" />
       {/* Page Header */}
-        <div className="text-center mb-12">
+
         <p className="font-aquire text-[#00D4F5] text-4xl font-bold tracking-[0.15em] uppercase mb-2">
-          Vivacity Esports
+        Vivacity Esports
         </p>
-        <h1 className="text-3xl font-bold text-white tracking-tight">Our Teams</h1>
-        <div className="w-10 h-0.5 bg-[#00D4F5] opacity-70 mx-auto mt-4 rounded-full" />    
-      </div>
+        <h1 className="text-3xl font-bold text-white mb-3 relative z-10">Our Teams</h1>
+        {/* <div className="w-10 h-0.5 bg-[#00D4F5] opacity-70 mx-auto mt-4 rounded-full" />     */}
+      </section>
       
+      <div className="h-px bg-white/5" />
 
       {/* Teams Grid */}
+      <section className="px-6 py-16 max-w-2xl mx-auto">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
         {teams.map((team) => (
           <Link

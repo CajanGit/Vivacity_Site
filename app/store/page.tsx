@@ -1,4 +1,5 @@
 // app/store/page.tsx
+'use client'
 
 export default function StorePage() {
   // ── Giveaway data ──────────────────────────────────────────────
@@ -20,35 +21,56 @@ export default function StorePage() {
       id: 1,
       name: "Vivacity T-Shirt",
       category: "Apparel",
-      price: "$29.99",
+      price: 2999,
       image: "/images/merch_placeholder_1.png",
-      storeUrl: "#",
     },
     {
       id: 2,
       name: "Vivacity Hoodie",
       category: "Apparel",
-      price: "$54.99",
+      price: 5499,
       image: "/images/merch_placeholder_2.png",
-      storeUrl: "#",
     },
     {
       id: 3,
       name: "Vivacity Cap",
       category: "Accessories",
-      price: "$24.99",
+      price: 2499,
       image: "/images/merch_placeholder_3.png",
-      storeUrl: "#",
     },
     {
       id: 4,
       name: "Vivacity Mousepad",
       category: "Accessories",
-      price: "$34.99",
+      price: 3499,
       image: "/images/merch_placeholder_4.png",
-      storeUrl: "#",
     },
   ]
+  
+  async function handleBuy(product: {
+    id: number
+    name: string
+    price: number
+    image: string
+  }) {
+    const res = await fetch ('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        productId: product.id,
+        productName: product.name,
+        price: product.price,
+        image: product.image,
+      }),
+    })
+
+    const data = await res.json()
+    if (data.url) {
+      window.location.href = data.url
+    } else {
+      alert('Something went wrong. Please try again.')
+    }
+  }
 
   return (
     <div className="bg-[#111314] min-h-screen">
@@ -59,7 +81,7 @@ export default function StorePage() {
             <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
             <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
 
-            <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
+            <p className="font-aquire text-[36px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
             Vivacity
             </p>
             <h1 className="text-4xl font-medium text-white mb-3 relative z-10">
@@ -149,18 +171,16 @@ export default function StorePage() {
                   {product.name}
                 </h3>
                 <p className="text-[#F5A800] text-sm font-medium mb-4">
-                  {product.price}
+                  ${(product.price / 100).toFixed(2)}
                 </p>
 
                 {/* Buy button */}
-                <a
-                  href={product.storeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => handleBuy(product)}
                   className="text-center text-xs border border-white/40 hover:border-white hover:bg-white/5 text-white px-4 py-2 rounded-md transition-colors"
                 >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
           ))}
