@@ -104,7 +104,7 @@ export default function Home() {
             </p>
 
             <Link
-              href="/teams"
+              href="/socials"
               className="flex items-center gap-2 text-xs text-[#00D4F5] hover:text-white hover:gap-4 transition-all duration-200 w-fit tracking-wide"
             >
               Follow us
@@ -147,7 +147,7 @@ export default function Home() {
             </p>
 
             <Link
-              href="/teams"
+              href="/store"
               className="flex items-center gap-2 text-xs text-[#00D4F5] hover:text-white hover:gap-4 transition-all duration-200 w-fit tracking-wide"
             >
               Browse store
