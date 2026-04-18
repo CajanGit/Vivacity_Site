@@ -3,7 +3,8 @@ import {
     SiX,
     SiInstagram,
     SiTwitch,
-    SiYoutube
+    SiYoutube,
+    SiDiscord,
 } from '@icons-pack/react-simple-icons';
 
 import { SocialMediaCard} from '@/app/components/SocialMediaCard';
@@ -20,7 +21,7 @@ const socialLinks = [
 },
 {
     icon: SiInstagram,
-    name: 'Discord',
+    name: 'Instagram',
     handle:'@Vivacity.Esports',
     url: 'https://www.instagram.com/vivacity.esports/',
     color: '#1DA1F2'
@@ -38,6 +39,13 @@ const socialLinks = [
     handle:'@Vivacity_Esports',
     url: 'https://www.youtube.com/@Vivacity_Esports',
     color: '#1DA1F2'
+},
+{
+    icon: SiDiscord,
+    name: 'Discord',
+    handle: '@Vivacity',
+    url: 'https://www.discord.com/NFUA7PhAcY',
+    color: '#1DA1F2',
 }
 ]
 export default function app(){
@@ -52,7 +60,7 @@ export default function app(){
         <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
 
-        <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
+        <p className="text-[36px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
           Connect On Our
         </p>
         <h1 className="text-4xl font-medium text-white mb-3 relative z-10">
