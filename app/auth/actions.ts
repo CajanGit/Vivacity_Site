@@ -6,6 +6,8 @@ import { redirect } from 'next/navigation'
 export async function signInWithDiscord() {
   const supabase = await createClient()
 
+  console.log('[Discord Auth] Starting sign in with Discord...')
+
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'discord',
     options: {
@@ -14,9 +16,17 @@ export async function signInWithDiscord() {
   })
 
   if (error) {
-    console.error(error)
+    console.error('[Discord Auth] OAuth initiation failed', {
+      error: error.message,
+      status: error.status,
+      code: error.code,
+    })
     redirect('/auth/error')
   }
+
+  console.log('[Discord Auth] Redirecting to Discord OAuth', {
+    url: data.url,
+  })
 
   redirect(data.url)
 }
