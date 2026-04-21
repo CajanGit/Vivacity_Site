@@ -12,7 +12,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="relative z-50">
+    <div className="relative">
       <nav className="px-5 h-16 flex gap-1 bg-black/40 text-white shadow-lg justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-14 h-14 md:w-20 md:h-20 object-contain relative" />

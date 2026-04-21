@@ -53,7 +53,7 @@ export default function app(){
     return (
     
     
-    <div className="bg-[#111314] min-h-screen" >
+    <div className="min-h-screen" >
 
       {/* Header */}
       <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">

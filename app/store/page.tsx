@@ -19,31 +19,10 @@ export default function StorePage() {
   const products = [
     {
       id: 1,
-      name: "Vivacity T-Shirt",
-      category: "Apparel",
-      price: 2999,
-      image: "/images/merch_placeholder_1.png",
-    },
-    {
-      id: 2,
       name: "Vivacity Hoodie",
       category: "Apparel",
       price: 5499,
-      image: "/images/merch_placeholder_2.png",
-    },
-    {
-      id: 3,
-      name: "Vivacity Cap",
-      category: "Accessories",
-      price: 2499,
-      image: "/images/merch_placeholder_3.png",
-    },
-    {
-      id: 4,
-      name: "Vivacity Mousepad",
-      category: "Accessories",
-      price: 3499,
-      image: "/images/merch_placeholder_4.png",
+      image: "/images/merch_hoodie_transparent.png",
     },
   ]
   
@@ -73,7 +52,7 @@ export default function StorePage() {
   }
 
   return (
-    <div className="bg-[#111314] min-h-screen">
+    <div className="min-h-screen">
 
     {/* ── Page Header ───────────────────────────────────────── */}
         <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
@@ -158,7 +137,7 @@ export default function StorePage() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 

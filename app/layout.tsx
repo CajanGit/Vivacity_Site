@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import "./globals.css";
 import Footer from "./components/Footer";
 import localFont from 'next/font/local'
+import ParticleBackground from "./components/ParticleBackground";
 
 const aquire = localFont({
   src: [
@@ -59,7 +60,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={aquire.variable}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <ParticleBackground />
         <Navbar />
         <main className="flex-1 w-full">
           {children}
