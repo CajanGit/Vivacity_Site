@@ -39,7 +39,7 @@ export default function Home() {
       {/* Teams */}
         <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
           <Image
-            src="/images/ow_team_placeholder.png"
+            src=""
             alt="Teams"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
@@ -81,7 +81,7 @@ export default function Home() {
         <section className="relative min-h-[300px] flex items-end overflow-hidden group">
 
           <Image
-            src="/images/socials_placeholder.png"
+            src=""
             alt="Teams"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
@@ -124,7 +124,7 @@ export default function Home() {
         <section className="relative min-h-[300px] flex items-end overflow-hidden group">
 
           <Image
-            src="/images/Vivacity_Keychain.png"
+            src=""
             alt="Teams"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
@@ -163,7 +163,12 @@ export default function Home() {
 
         {/* Coaching */}
         <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
-          <Image src="/images/ow_coaching_placeholder.jpg" alt="Coaching" fill className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]" />
+          <Image 
+          src="" 
+          alt="Coaching" 
+          fill 
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]" 
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
           <div className="relative z-10 p-10 flex flex-col gap-3">
             <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase">Get Yourself</p>
