@@ -39,7 +39,7 @@ export default function Home() {
       {/* Teams */}
         <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
           <Image
-            src=""
+            src="/images/logo_filled.png"
             alt="Teams"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
@@ -81,8 +81,8 @@ export default function Home() {
         <section className="relative min-h-[300px] flex items-end overflow-hidden group">
 
           <Image
-            src=""
-            alt="Teams"
+            src="/images/logo_filled.png"
+            alt="Socials"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
             loading="eager"
@@ -124,8 +124,8 @@ export default function Home() {
         <section className="relative min-h-[300px] flex items-end overflow-hidden group">
 
           <Image
-            src=""
-            alt="Teams"
+            src="/images/logo_filled.png"
+            alt="Store"
             fill
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
             loading="eager"
@@ -164,7 +164,7 @@ export default function Home() {
         {/* Coaching */}
         <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
           <Image 
-          src="" 
+          src="/images/logo_filled.png" 
           alt="Coaching" 
           fill 
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]" 
