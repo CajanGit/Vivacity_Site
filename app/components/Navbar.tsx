@@ -12,8 +12,8 @@ export default function Navbar() {
   }
 
   return (
-    <div className="relative">
-      <nav className="px-5 h-16 flex gap-1 bg-black/40 text-white shadow-lg justify-between">
+    <div className="relative z-50">
+      <nav className="px-5 h-16 flex gap-1 bg-black text-white shadow-lg justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-14 h-14 md:w-20 md:h-20 object-contain relative" />
             <span className="font-aquire text-[#00D4F5] text-2xl md:text-4xl font-bold tracking-wide"> Vivacity Esports </span>
@@ -36,7 +36,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <div className={`fixed top-0 left-0 h-full w-[250px] bg-black text-white transform transition-transform duration-300 z-0
+      <div className={`fixed top-0 left-0 h-full w-[250px] bg-black text-white transform transition-transform duration-300 z-40
         ${isOpen ? 'translate-x-0 pointer-events-auto' : '-translate-x-full pointer-events-none'}`}>
         <div className="pt-20 px-6 flex flex-col gap-6">
           <Link href="/teams" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Teams</Link>

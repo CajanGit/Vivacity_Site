@@ -2,11 +2,15 @@
 
 import { useEffect, useRef } from 'react'
 
-interface Particle {
-    x: number
-    y: number
-    vx: number
-    vy: number
+interface Wave {
+    yBase: number
+    amplitude: number
+    frequency: number
+    speed: number
+    phase: number
+    opacity: number
+    lineWidth: number
+    color: string
 }
 
 export default function ParticleBackground() {
@@ -19,89 +23,78 @@ export default function ParticleBackground() {
         if (!ctx) return
 
         let animationId: number
-        let particles: Particle[] = []
 
-        const PARTICLE_COUNT = 60
-        const CONNECTION_DISTANCE = 120
-        // const PARTICLE_COLOR = '139, 92, 246'
-        // const PARTICLE_COLOR = '0, 212, 245'   // #00D4F5 cyan
-        const PARTICLE_COLOR = '245, 168, 0'   // #F5A800 amber
-        const SPEED = 0.3
+        // Generate waves once — stored outside draw() so they don't reset each frame
+        // This is the key to "random but stable" — randomize on mount, not on render
+        const waveCount = 32
+        const waves: Wave[] = Array.from({ length: waveCount }, (_, i) => ({
+            // Spread waves across full canvas height, with some randomness
+            yBase: (canvas.height / waveCount) * i + (Math.random() - 0.5) * 60,
+            // Randomize amplitude — some waves are gentle, some dramatic
+            amplitude: 15 + Math.random() * 55,
+            // Randomize frequency — some waves are tight, some are long and rolling
+            frequency: 0.005 + Math.random() * 0.006,
+            // Randomize speed — subtle variation makes it feel alive
+            speed: 0.003 + Math.random() * 0.012,
+            // Random starting phase so they're not all in sync at t=0
+            phase: Math.random() * Math.PI * 2,
+            // Vary opacity for depth — some waves recede, some pop
+            opacity: 0.1 + Math.random() * 0.28,
+            // Vary thickness slightly
+            lineWidth: 1 + Math.random() * 0.9,
+            // Green channel varies 140–230, shifting between deep blue and bright cyan
+            // Blue channel varies 200–255, keeping everything in the cool blue family
+            color: `rgba(0, ${Math.floor(140 + Math.random() * 90)}, ${Math.floor(200 + Math.random() * 55)}, `,
+
+        }))
 
         function resize() {
             canvas.width = window.innerWidth
             canvas.height = window.innerHeight
-        }
-
-        function spawn(): Particle {
-            return {
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * SPEED,
-                vy: (Math.random() - 0.5) * SPEED,
-            }
-        }
-
-        function init() {
-            particles = Array.from({ length: PARTICLE_COUNT }, spawn)
+            // Recalculate yBase on resize so waves still spread across full height
+            waves.forEach((wave, i) => {
+                wave.yBase = (canvas.height / waveCount) * i + (Math.random() - 0.5) * 60
+            })
         }
 
         function draw() {
-            ctx?.clearRect(0, 0, canvas?.width, canvas?.height)
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-            //update + draw dots
-            for (const p of particles) {
-                p.x += p.vx
-                p.y += p.vy
+            waves.forEach((wave) => {
 
-                // wrap around eges instead of bouncing
-                if (p.x < 0) p.x = canvas.width
-                if (p.x > canvas?.width) p.x = 0
-                if (p.y < 0) p.y = canvas.height
-                if (p.y > canvas.height) p.y = 0
+                wave.phase += wave.speed
+            
 
                 ctx.beginPath()
-                ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2)
-                ctx.fillStyle = `rgba(${PARTICLE_COLOR}, 0.6)`
-                ctx.fill()
-            }
+                ctx.strokeStyle = `${wave.color}${wave.opacity})`
+                ctx.lineWidth = wave.lineWidth
 
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x
-                    const dy = particles[i].y - particles[j].y
-                    const dist = Math.sqrt(dx * dx + dy * dy)
-                    
-                    if (dist < CONNECTION_DISTANCE) {
-                        const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.3
-                        ctx.beginPath()
-                        ctx.moveTo(particles[i].x, particles[i].y)
-                        ctx.lineTo(particles[j].x, particles[j].y)
-                        ctx.strokeStyle = `rgba(${PARTICLE_COLOR}, ${opacity})`
-                        ctx.lineWidth = 0.5
-                        ctx?.stroke()
-                    }
+            // Step by 3px for performance — smooth enough, cheaper than every pixel
+                for (let x = 0; x <= canvas.width; x += 3) {
+                    const y = wave.yBase + Math.sin(x * wave.frequency + wave.phase) * wave.amplitude
+                    x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
                 }
-            }
-        animationId = requestAnimationFrame(draw)
+
+                ctx.stroke()
+            })
+
+            animationId = requestAnimationFrame(draw)
         }
-    resize()
-    init()
-    draw()
 
-    window.addEventListener('resize', resize)
+        resize()
+        draw()
 
-    return () => { 
-        cancelAnimationFrame(animationId)
-        window.removeEventListener('resize', resize)
+        window.addEventListener('resize', resize)
+        return () => {
+            cancelAnimationFrame(animationId)
+            window.removeEventListener('resize', resize)
         }
     }, [])
 
     return (
         <canvas
             ref={canvasRef}
-            style={{ zIndex: -1}}
             className="fixed inset-0 -z-10 pointer-events-none"
-        ></canvas>
+        />
     )
 }

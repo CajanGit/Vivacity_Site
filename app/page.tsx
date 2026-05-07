@@ -34,17 +34,22 @@ export default function Home() {
 
       {/* Sections Grid */}
 
-      <div id="sections" className="grid grid-cols-2 gap-px bg-neutral-800">
+      <div id="sections" className="grid grid-cols-1 gap-px bg-neutral-800">
 
       {/* Teams */}
-        <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
-          <Image
-            src="/images/logo_filled.png"
+        <section className="relative min-h-[600px] flex items-end overflow-hidden group">
+          <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-[1.04]">
+            <Image
+            src="/images/Teams_Section.png"
             alt="Teams"
             fill
+            priority
+            sizes="100vw"
+            quality={90} 
             className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
-            loading="eager"
-          />
+            /> 
+          </div>
+          
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
 
           <div className="relative z-10 p-10 flex flex-col gap-3">
@@ -78,15 +83,19 @@ export default function Home() {
         </section>
 
         {/* Socials */}
-        <section className="relative min-h-[300px] flex items-end overflow-hidden group">
-
-          <Image
-            src="/images/logo_filled.png"
+        <section className="relative min-h-[600px] flex items-end overflow-hidden group">
+          <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-[1.04]">
+            <Image
+            src="/images/SocialBG2.png"
             alt="Socials"
             fill
-            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
-            loading="eager"
-          />
+            priority
+            sizes="100vw"
+            quality={90} 
+            className="object-cover"
+            />
+          </div>
+          
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
 
           <div className="relative z-10 p-10 flex flex-col gap-3">
@@ -121,15 +130,18 @@ export default function Home() {
         </section>
 
         {/* Store */}
-        <section className="relative min-h-[300px] flex items-end overflow-hidden group">
-
-          <Image
-            src="/images/logo_filled.png"
+        <section className="relative min-h-[600px] flex items-end overflow-hidden group">
+          <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-[1.04]">
+            <Image
+            src="/images/Store_Section.png"
             alt="Store"
             fill
-            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]"
-            loading="eager"
-          />
+            priority
+            sizes="100vw"
+            quality={90} 
+            className="object-cover"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
 
           <div className="relative z-10 p-10 flex flex-col gap-3">
@@ -162,13 +174,19 @@ export default function Home() {
 
 
         {/* Coaching */}
-        <section className="relative col-span-2 min-h-[340px] flex items-end overflow-hidden group">
-          <Image 
-          src="/images/logo_filled.png" 
-          alt="Coaching" 
-          fill 
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.04]" 
-          />
+        <section className="relative min-h-[600px] flex items-end overflow-hidden group">
+          <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-[1.04]">
+            <Image 
+            src="/images/Coaching_Section.png" 
+            alt="Coaching" 
+            fill 
+            priority
+            sizes="100vw"
+            quality={90} 
+            className="object-cover"
+            />
+          </div>
+          
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
           <div className="relative z-10 p-10 flex flex-col gap-3">
             <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase">Get Yourself</p>
