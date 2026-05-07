@@ -59,7 +59,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h2 className="text-2xl font-medium text-white">Teams</h2>
+            <h2 className="text-8xl font-aquire text-white">Teams</h2>
 
             <p className="text-sm text-white/50 max-w-md leading-relaxed">
               Browse our active rosters, live match schedules, and results from our teams.
@@ -102,7 +102,7 @@ export default function Home() {
               </p>
             </div>
 
-            <h2 className="text-2xl font-medium text-white">Socials</h2>
+            <h2 className="text-8xl font-aquire text-white">Socials</h2>
 
             <p className="text-sm text-white/50 max-w-md leading-relaxed">
               Check out Vivacity's social media accounts.
@@ -148,7 +148,7 @@ export default function Home() {
               </p>
             </div>
 
-            <h2 className="text-2xl font-medium text-white">Store</h2>
+            <h2 className="text-8xl font-aquire text-white">Store</h2>
 
             <p className="text-sm text-white/50 max-w-md leading-relaxed">
               Browse our merch and rep Vivacity!
@@ -185,8 +185,10 @@ export default function Home() {
           
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition-opacity duration-300 group-hover:opacity-80" />
           <div className="relative z-10 p-10 flex flex-col gap-3">
-            <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase">Get Yourself</p>
-            <h2 className="text-2xl font-medium text-white">Coaching</h2>
+            <p className="text-[10px] tracking-[0.18em] text-[#00D4F5] uppercase">
+              Get Yourself
+            </p>
+            <h2 className="text-8xl font-aquire text-white">Coaching</h2>
             <p className="text-sm text-white/50 max-w-md leading-relaxed">
               Book a session with a verified coach and get personalised feedback to sharpen your gameplay.
             </p>
