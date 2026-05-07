@@ -35,7 +35,7 @@ export default function ParticleBackground() {
             // Randomize frequency — some waves are tight, some are long and rolling
             frequency: 0.005 + Math.random() * 0.006,
             // Randomize speed — subtle variation makes it feel alive
-            speed: 0.003 + Math.random() * 0.012,
+            speed: 0.001 + Math.random() * 0.012,
             // Random starting phase so they're not all in sync at t=0
             phase: Math.random() * Math.PI * 2,
             // Vary opacity for depth — some waves recede, some pop

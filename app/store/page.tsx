@@ -56,9 +56,6 @@ export default function StorePage() {
 
     {/* ── Page Header ───────────────────────────────────────── */}
         <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
-            {/* Decorative blobs — same pattern as home page */}
-            <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
 
             <p className="font-aquire text-[36px] tracking-[0.18em] text-[#00D4F5] uppercase mb-3 relative z-10">
             Vivacity

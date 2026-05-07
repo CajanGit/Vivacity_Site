@@ -11,10 +11,6 @@ export default function Home() {
 
       <section className="relative flex flex-col items-center justify-center text-center min-h-[50vh] px-8 py-20 overflow-hidden">
 
-        {/* Glow bobs */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
-
         <img src="/images/logo_filled.png" alt="Vivacity logo" className="w-32 h-32 object-contain mb-6 relative z-10" />
 
         <h1 className="text-4xl font-medium text-white mb-3 relative z-10">

@@ -17,9 +17,6 @@ export default async function TeamsPage() {
     <div className="min-h-screen">
 
       <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
-
-        <div className="absolute -bottom-20 -left-20 w-95 h-95 rounded-full bg-[#00D4F5] opacity-30 blur-3xl pointer-events-none" />
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-30 blur-3xl pointer-events-none" />
       {/* Page Header */}
 
         <p className="font-aquire text-[#00D4F5] text-4xl font-bold tracking-[0.15em] uppercase mb-2">
@@ -33,7 +30,7 @@ export default async function TeamsPage() {
 
       {/* Teams Grid */}
       <section className="px-6 py-16 max-w-2xl mx-auto">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-4xl">
         {teams.map((team) => (
           <Link
             key={team.team_id}
