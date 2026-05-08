@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <div className="relative z-50">
-      <nav className="px-5 h-16 flex gap-1 bg-black text-white shadow-lg justify-between">
+      <nav className="px-5 h-16 flex gap-1 bg-black/40 text-white backdrop-blur-sm shadow-lg justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <img src="/images/logo_transparent.png" alt="Vivacity logo" className="w-14 h-14 md:w-20 md:h-20 object-contain relative" />
             <span className="font-aquire text-[#00D4F5] text-2xl md:text-4xl font-bold tracking-wide"> Vivacity Esports </span>

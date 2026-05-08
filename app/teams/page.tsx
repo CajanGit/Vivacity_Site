@@ -14,7 +14,7 @@ export default async function TeamsPage() {
   );
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black/85">
 
       <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
       {/* Page Header */}
