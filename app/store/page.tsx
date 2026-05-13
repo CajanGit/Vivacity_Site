@@ -21,7 +21,7 @@ export default function StorePage() {
       id: 1,
       name: "Vivacity Hoodie",
       category: "Apparel",
-      price: 3500,
+      price: 4500,
       image: "/images/merch_hoodie_transparent.png",
     },
 
@@ -29,7 +29,7 @@ export default function StorePage() {
       id: 2,
       name: "Vivacity Hat",
       category: "Apparel",
-      price: 3200,
+      price: 3500,
       image: "/images/vivacity_hat_transparent.png",
     },
 
@@ -137,6 +137,7 @@ export default function StorePage() {
             Official
           </p>
           <h2 className="text-2xl font-medium text-white">Merch</h2>
+          <p className="text-[10px] opacity-80"> United States and Canada Only</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5">

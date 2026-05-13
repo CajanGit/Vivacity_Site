@@ -93,9 +93,6 @@ export default function ContactForm() {
           </option>
           <option value="general" className="bg-[#0a0b0c]">💬 General Enquiry</option>
           <option value="sponsorship" className="bg-[#0a0b0c]">🤝 Sponsorship / Partnership</option>
-          <option value="tryout" className="bg-[#0a0b0c]">🎮 Player Tryout</option>
-          <option value="coaching" className="bg-[#0a0b0c]">🏆 Coaching</option>
-          <option value="media" className="bg-[#0a0b0c]">🎥 Media / Press</option>
           <option value="other" className="bg-[#0a0b0c]">✉️ Other</option>
         </select>
       </div>
