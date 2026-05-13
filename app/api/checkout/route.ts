@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
             currency: 'usd',
             unit_amount: price, // in cents, e.g. 2999 for $29.99
             product_data: {
-              name: productName,
+            name: productName,
               // images: image ? [image] : [],
             },
           },

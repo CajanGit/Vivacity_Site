@@ -27,7 +27,7 @@ export default async function TeamPage({ params }: { params: Promise<{ teamId: s
   const now = new Date();
 
   const filteredMembers = team.members.filter(
-  (member) => TEAM_ROSTER[member.user_id]
+  (member) => TEAM_ROSTER[member.user_id]?.teamId == teamId
 );
 
 const players = filteredMembers.filter(
@@ -53,96 +53,7 @@ const pastMatches = teamMatches
 
   console.log("url", teamMatches.map((m: any) => m.faceitUrl));
   console.log("teamMatches:", teamMatches);
-  // return (
-
-  //   <div className="bg-[#111314] min-h-screen grid grid-cols-2 overflow-hidden">
-  //     <div className="p-8">
-  //     <img src={team.avatar} alt={team.name} className="w-24 h-24 rounded-full" />
-  //     <h1 className="text-4xl font-bold mt-2">{team.name}</h1>
-
-  //     <h2 className="text-lg font-semibold mt-6 mb-2">Players</h2>
-  //     <ul>
-  //       {players.map((player) => (
-  //         <li key={player.user_id} className="flex items-center gap-3 mb-2">
-  //           <img src={player.avatar} alt={player.nickname} className="w-8 h-8 rounded-full" />
-  //           <span>{player.nickname}</span>
-  //         </li>
-  //       ))}
-  //     </ul>
-
-  //     <h2 className="text-lg font-semibold mt-6 mb-2">Coaches</h2>
-  //     <ul>
-  //       {coaches.map((coach) =>
-  //         <li key={coach.user_id} className="flex items-center gap-3 mb-2">
-  //           <img src={coach.avatar} alt={coach.nickname} className="w-8 h-8 rounded-full" />
-  //           <span>{coach.nickname}</span>
-  //         </li>
-  //       )}
-  //     </ul>
-  //   </div>
-  //       <div className="p-8">
-  //         <h2 className="text-lg font-semibold mb-2"> Upcoming Matches </h2>
-  //         {upcomingMatches.length === 0 && <p> No Upcoming Matches </p>}
-  //         <ul>
-  //           {upcomingMatches.map((match: any) => (
-  //             <li key={match.eventId} className="mb-4">
-  //               <p className="font-semibold">
-  //                 vs {" "}
-  //                 {match.faceitUrl ? (
-  //                   <a href={match.faceitUrl} target="_blank" className="underline hover:text-purple-400">
-  //                     {match.opponentName}
-  //                   </a>
-  //                 ) : (
-  //                   match.opponentName
-  //                 )}
-  //               </p>
-  //               <LocalTime dateString={match.scheduledAt} />
-  //               {match.score && (
-  //                 <p>{match.score.us} - {match.score.them}</p>
-  //               )}
-  //               {match.isStreamed && match.streamUrl && (
-  //                 <a href={match.streamUrl} target="_blank" className="text-purple-400 underline ml-2">
-  //                   Watch Live
-  //                 </a>
-  //               )}
-  //             </li>
-  //           ))}
-  //         </ul>
-
-  //       <h2 className="text-lg font-semibold mt-8 mb-4">Past Matches</h2>
-  //       {pastMatches.length === 0 && <p>No past matches</p>}
-  //       <ul>
-  //         {pastMatches.map((match: any) => (
-  //           <li key={match.eventId} className="mb-4">
-  //             <p className="font-semibold">
-  //               vs {" "}
-  //               {match.faceitUrl ? (
-  //                 <a href={match.faceitUrl} target="_blank" className="underline hover:text-purple-400">
-  //                   {match.opponentName}
-  //                 </a>
-  //               ) : (
-  //                 match.opponentName
-  //               )}
-  //             </p>
-  //             <LocalTime dateString={match.scheduledAt} />
-  //             {match.score && (
-  //               <p>{match.score.us} - {match.score.them}</p>
-  //             )}
-  //             {match.isStreamed && match.streamUrl && (
-  //                 <a href={match.streamUrl} target="_blank" className="text-purple-400 underline ml-2">
-  //                   Watch Live
-  //                 </a>
-  //               )}
-  //             {/* {match.result && (
-  //               <p>{match.result.us} - {match.result.them}</p>
-  //             )} */}
-  //           </li>
-  //         ))}
-  //       </ul>
-  //       </div>
-  //   </div>
-    
-  // );
+  
 
     return (
   <div className="bg-[#111314] min-h-screen text-white" style={{ fontFamily: "'Barlow', sans-serif" }}>

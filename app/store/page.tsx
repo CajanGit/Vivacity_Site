@@ -21,9 +21,25 @@ export default function StorePage() {
       id: 1,
       name: "Vivacity Hoodie",
       category: "Apparel",
-      price: 5499,
+      price: 3500,
       image: "/images/merch_hoodie_transparent.png",
     },
+
+    { 
+      id: 2,
+      name: "Vivacity Hat",
+      category: "Apparel",
+      price: 3200,
+      image: "/images/vivacity_hat_transparent.png",
+    },
+
+    { 
+      id: 3,
+      name: "Vivacity Keychain",
+      category: "Apparel",
+      price: 1000,
+      image: "/images/Vivacity_Keychain.png",
+    }
   ]
   
   async function handleBuy(product: {
@@ -52,7 +68,7 @@ export default function StorePage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black/85">
 
     {/* ── Page Header ───────────────────────────────────────── */}
         <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">
@@ -130,11 +146,11 @@ export default function StorePage() {
               className="group flex flex-col rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors bg-[#0a0b0c]"
             >
               {/* Product image */}
-              <div className="relative h-48 w-full overflow-hidden bg-white/5">
+              <div className="relative h-56 w-full overflow-hidden bg-white/5 flex items-center justify-center p-4">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
