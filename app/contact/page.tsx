@@ -2,7 +2,7 @@ import ContactForm from '@/app/components/ContactForm'
 
 export default function ContactUs() {
   return (
-    <div className="min-h-screen bg-black/85">
+    <div className="min-h-screen">
 
       {/* Header — same pattern as store/socials pages */}
       <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">

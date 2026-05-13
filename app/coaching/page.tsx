@@ -21,7 +21,7 @@ const perks = [
 
 export default function CoachingPage() {
   return (
-    <div className="min-h-screen bg-black/85">
+    <div className="min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative flex flex-col items-center justify-center text-center px-8 py-24 overflow-hidden">

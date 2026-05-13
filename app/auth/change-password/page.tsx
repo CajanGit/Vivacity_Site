@@ -62,8 +62,6 @@ function ChangePasswordForm() {
 export default function ChangePasswordPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-[#00D4F5] opacity-20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#F5A800] opacity-20 blur-3xl pointer-events-none" />
       <Suspense fallback={null}>
         <ChangePasswordForm />
       </Suspense>

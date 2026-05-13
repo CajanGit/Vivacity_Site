@@ -68,7 +68,7 @@ export default function StorePage() {
   }
 
   return (
-    <div className="min-h-screen bg-black/85">
+    <div className="min-h-screen">
 
     {/* ── Page Header ───────────────────────────────────────── */}
         <section className="relative flex flex-col items-center justify-center text-center px-8 py-20 overflow-hidden">

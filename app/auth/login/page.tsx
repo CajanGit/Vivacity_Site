@@ -8,7 +8,7 @@ export default function LoginPage() {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin')
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-black/85">
+    <div className="min-h-screen flex items-center justify-center px-4">
       {/* Decorative blobs — consistent with your design system */}
 
       <div className="relative z-10 w-full max-w-sm">
