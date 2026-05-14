@@ -39,12 +39,12 @@ export default function Navbar() {
       <div className={`fixed top-0 left-0 h-full w-[250px] bg-black text-white transform transition-transform duration-300 z-40
         ${isOpen ? 'translate-x-0 pointer-events-auto' : '-translate-x-full pointer-events-none'}`}>
         <div className="pt-20 px-6 flex flex-col gap-6">
-          <Link href="/teams" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Teams</Link>
-          <Link href="/socials" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Socials</Link>
-          <Link href="/store" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Store</Link>
-          <Link href="/coaching" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Coaching</Link>
+          <Link href="/teams" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Teams</Link>
+          <Link href="/socials" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Socials</Link>
+          <Link href="/store" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Store</Link>
+          <Link href="/coaching" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Coaching</Link>
         <div className="w-full h-px bg-white/10" />
-        <AuthButton />
+        <AuthButton onNavigate={() => setIsOpen(false)} />
         </div>
       </div>
     </div>

@@ -7,7 +7,11 @@ import type { User } from '@supabase/supabase-js'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
-export default function AuthButton() {
+interface AuthButtonProps {
+  onNavigate?: () => void
+}
+
+export default function AuthButton({ onNavigate }: AuthButtonProps) {
     const router = useRouter()
     const [user, setUser] = useState<User | null>(null)
     const[loading, setLoading] = useState(true)
@@ -40,7 +44,7 @@ export default function AuthButton() {
         document.addEventListener('touchstart', handleClickOutside)
         return () => {
             document.removeEventListener('mousedown', handleClickOutside)
-            document.addEventListener('touchstart', handleClickOutside)
+            document.removeEventListener('touchstart', handleClickOutside)
         }
     }, [])
 
@@ -50,6 +54,7 @@ export default function AuthButton() {
         return (
             <Link
                 href="/auth/login"
+                onClick={onNavigate}
                 className="border border-white/50 hover:border-white hover:bg-white/5 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"
             >
                 Sign In
