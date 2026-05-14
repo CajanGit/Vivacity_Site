@@ -6,11 +6,15 @@ type Team = {
   team_id: string
   name: string
   avatar: string;
+  division: string;
 };
 
 export default async function TeamsPage() {
   const teams:Team[] = await Promise.all(
-    TEAMS.map(({ teamId }) => getTeam(teamId))
+    TEAMS.map(async ({ teamId, division }) => {
+      const faceitData = await getTeam(teamId)
+      return { ...faceitData, division }   
+    })
   );
 
   return (
@@ -56,6 +60,7 @@ export default async function TeamsPage() {
               <span className="text-white font-semibold text-sm text-center leading-snug">
                 {team.name}
               </span>
+              <p className="text-[10px]">{team.division}</p>
               <span className="text-[#00D4F5]/60 text-[11px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               View team →
               </span>

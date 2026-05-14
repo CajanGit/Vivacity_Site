@@ -1,8 +1,11 @@
-
 import Image from 'next/image'
 import Link from 'next/link'
+import { isStreamLive } from '@/lib/twitch'
+import TwitchEmbed from '@/app/components/TwitchEmbed'
 
-export default function Home() {
+export default async function Home() {
+
+  const live = await isStreamLive(process.env.TWITCH_CHANNEL!)
   return (
 
     <div className="min-h-screen">
@@ -27,6 +30,13 @@ export default function Home() {
           Explore
         </a>
       </section>
+
+      {live && (
+        <section className="px-6 py-8 max-w-4xl mx-auto">
+          <p className="text-[10px] tracking-[0.18em] text-red-400 uppercase mb-3">🔴 Live Now</p>
+          <TwitchEmbed channel={process.env.TWITCH_CHANNEL!} />
+        </section>
+)}
 
       {/* Sections Grid */}
 

@@ -3,12 +3,12 @@
 export const TEAMS = [
 
 //Vivacity
-  { teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5", championshipId: "abc-123", calendarName: "Vivacity"},
+  { teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5", championshipId: "abc-123", calendarName: "Vivacity", division: "Masters"},
 //
-  { teamId: "918cdb82-8180-4c4a-842a-4e425863237f", championshipId: "xyz-789", calendarName: "Velocity" },
+  { teamId: "918cdb82-8180-4c4a-842a-4e425863237f", championshipId: "xyz-789", calendarName: "Velocity", division: "Expert" },
 //
-  { teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9", championshipId: "xyz-789", calendarName: "Venom" },
+  { teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9", championshipId: "xyz-789", calendarName: "Voidwalkers", division: "Expert" },
 //
-  { teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999", championshipId: "xyz-789", calendarName: "Voidwalkers" },
+  { teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999", championshipId: "xyz-789", calendarName: "Venom", division: "Advanced" },
 
 ];
