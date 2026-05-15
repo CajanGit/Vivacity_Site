@@ -15,8 +15,10 @@ export default async function AboutPage() {
 
     const staff = data.map(member => ({
         ...member,
-        title: STAFF_ROSTER[member.id].title
+        title: STAFF_ROSTER[member.id].title,
+        order: STAFF_ROSTER[member.id].order,
     }))
+    .sort((a, b) => a.order - b.order)
 
   return (
     <div className="min-h-screen">
