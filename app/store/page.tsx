@@ -89,7 +89,7 @@ export default function StorePage() {
     {/* ── Giveaway ───────────────── */}
         <section className="px-6 py-16 max-w-2xl mx-auto">
         <a  
-            href="https://twitter.com/VivacityOW/status/2038647441948303505?s=20"
+            href="https://x.com/VivacityOw/status/2055362810104680453?s=20"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex flex-col rounded-xl overflow-hidden border border-white/10 hover:border-[#00D4F5]/40 transition-colors bg-[#0a0b0c]"
