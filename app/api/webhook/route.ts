@@ -30,6 +30,16 @@ export async function POST(req: NextRequest) {
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session
 
+    console.log(
+        '👉 EXACT STRIPE SHIPPING DATA:', 
+        (session as any).collected_information?.shipping_details || (session as any).shipping_details
+      )
+
+    const shippingAddress = 
+      (session as any).collected_information?.shipping_details?.address || 
+      (session as any).shipping_details?.address || 
+      null
+
     // 1. Save order to Supabase
     const { error: dbError } = await supabase.from('orders').insert({
       stripe_session_id: session.id,
@@ -40,7 +50,7 @@ export async function POST(req: NextRequest) {
       customer_name: session.customer_details?.name,
       product_id: session.metadata?.productId,
       product_name: session.metadata?.productName,
-      shipping_address: (session as any).shipping?.address ?? null,
+      shipping_address: shippingAddress,
       status: 'paid',
       size: session.metadata?.size || null,
     })
