@@ -17,21 +17,35 @@ export default function AuthButton({ onNavigate }: AuthButtonProps) {
     const[loading, setLoading] = useState(true)
     const[dropdownOpen, setDropdownOpen] = useState(false)
     const dropdownRef = useRef<HTMLDivElement>(null)
+    const [teamId, setTeamId] = useState<string | null>(null)
 
     useEffect(() => {
-        const supabase = createClient()
+      const supabase = createClient()
 
         //Get current session on mount
-        supabase.auth.getUser().then(({ data }) => {
-            setUser(data.user)
-            setLoading(false)
-        })
+      async function initUser() {
+        const { data } = await supabase.auth.getUser()
+        setUser(data.user)
+        
+
+        if (data.user) {
+          const { data: profile } = await supabase
+              .from('profiles')
+              .select('team_id')
+              .eq('id', data.user.id)
+              .single()
+          setTeamId(profile?.team_id ?? null)
+        }    
+        setLoading(false)
+      }
+
+      initUser()
 
         //listen for login/logout events
-        const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-            setUser(session?.user ?? null)
-        })
-        return () => listener.subscription.unsubscribe()
+      const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+          setUser(session?.user ?? null)
+      })
+      return () => listener.subscription.unsubscribe()
     }, [])
 
     useEffect(() => {
@@ -122,6 +136,19 @@ export default function AuthButton({ onNavigate }: AuthButtonProps) {
               </svg>
               Change Password
             </Link>
+
+          {teamId && (
+            <Link
+              href="/my-team"
+              onClick={() => setDropdownOpen(false)}
+              className="flex items-center gap-3 px-4 py-2.5 text-sm text-[#00D4F5] hover:text-white hover:bg-white/5 transition-colors w-full"
+            >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+              My Team
+            </Link>
+)}
 
             <button
               onClick={async () => {

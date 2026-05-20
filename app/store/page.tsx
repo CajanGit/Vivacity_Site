@@ -1,6 +1,8 @@
 // app/store/page.tsx
 'use client'
 
+import React, { useState } from 'react';
+
 export default function StorePage() {
   // ── Giveaway data ──────────────────────────────────────────────
   // Replace these with real data later (Supabase, CMS, hardcoded, etc.)
@@ -23,6 +25,7 @@ export default function StorePage() {
       category: "Apparel",
       price: 4500,
       image: "/images/merch_hoodie_transparent.png",
+      sizes: ["S", "M", "L", "XL", "XXL"],
     },
 
     { 
@@ -41,13 +44,22 @@ export default function StorePage() {
       image: "/images/Vivacity_Keychain.png",
     }
   ]
+
+  const [selectedSizes, setSelectedSizes] = useState<Record<number, string>>({})
   
   async function handleBuy(product: {
     id: number
     name: string
     price: number
     image: string
+    sizes?: string[]
   }) {
+
+    if (product.sizes?.length && !selectedSizes[product.id]) {
+      alert('Please select a size before purchasing.')
+      return
+    }
+    
     const res = await fetch ('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -56,6 +68,7 @@ export default function StorePage() {
         productName: product.name,
         price: product.price,
         image: product.image,
+        size: selectedSizes[product.id] ?? null,
       }),
     })
 
@@ -166,6 +179,26 @@ export default function StorePage() {
                 <p className="text-[#F5A800] text-sm font-medium mb-4">
                   ${(product.price / 100).toFixed(2)}
                 </p>
+
+                {product.sizes && product.sizes.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() =>
+                        setSelectedSizes((prev) => ({ ...prev, [product.id]: size}))
+                      }
+                      className={`text-xs px-2.5 py-1 rounded border transition-colors ${
+                        selectedSizes[product.id] === size
+                          ? 'border-[#00D4F5] text-[#00D4F5] bg-[#00D4F5]/10'
+                          : 'border-white/20 text-gray-400 hover:border-white/40'
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                  </div>
+                )}
 
                 {/* Buy button */}
                 <button

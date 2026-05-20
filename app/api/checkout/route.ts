@@ -1,11 +1,15 @@
 import Stripe from 'stripe'
 import { NextRequest, NextResponse } from 'next/server'
 
+
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
 
 export async function POST(req: NextRequest) {
   try {
-    const { productId, productName, price, image } = await req.json()
+    const { productId, productName, price, image, size } = await req.json()
+
+    const productDescription = size ? `Size: ${size}`: undefined
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -18,6 +22,7 @@ export async function POST(req: NextRequest) {
             unit_amount: price, // in cents, e.g. 2999 for $29.99
             product_data: {
             name: productName,
+            description: productDescription,
               // images: image ? [image] : [],
             },
           },
@@ -29,6 +34,7 @@ export async function POST(req: NextRequest) {
       metadata: {
         productId: String(productId),
         productName,
+        size: size,
       },
       success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/store/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL}/store`,

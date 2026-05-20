@@ -42,6 +42,7 @@ export async function POST(req: NextRequest) {
       product_name: session.metadata?.productName,
       shipping_address: (session as any).shipping?.address ?? null,
       status: 'paid',
+      size: session.metadata?.size || null,
     })
 
     if (dbError) {
