@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { TEAMS } from '@/lib/teamIds'
 
-export default function JoinPage() {
+function JoinContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [status, setStatus] = useState<'loading' | 'error' | 'success'>('loading')
@@ -56,5 +56,16 @@ export default function JoinPage() {
       {status === 'success' && <p className="text-[#00D4F5]">Joined! Redirecting to your team hub...</p>}
       {status === 'error' && <p className="text-red-400">{message}</p>}
     </div>
+  )
+}
+
+export default function JoinPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
+      <p className="text-gray-400">Loading...</p>
+      </div>}>
+      <JoinContent />
+    </Suspense>
+    
   )
 }
