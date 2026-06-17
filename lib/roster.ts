@@ -3,50 +3,46 @@ export const TEAM_ROSTER: Record<string, { role: "player" | "coach", teamId: str
 
 //Vivacity Flagship
 
-"fc84d220-aeb6-4b01-a77a-edf24bd4e6ef": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"b80a8a42-9222-4d9a-8b9e-630f68f358f0": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"ecfcf524-670c-429e-9ae7-888737e52208": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },  
-"ee343b9a-b8b2-4651-a7ae-22ade90b86ab": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"c6cbc530-fe0b-4422-b365-8d8704eccfdc": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"fd5a16be-dc46-47ce-8295-3b5b816cd563": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"de10fb13-d45f-4d27-80c0-cbbb1a68651b": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"a24a496f-dcb6-495b-818f-28909d4974d1": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"d4177d27-217e-4919-9c87-659ce5cabf45": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
-"e02ba784-f680-4111-9447-de3b7b0c70d3": { role: "player", teamId: "81d8c9ef-d771-4c9f-8d93-ffb23f70c1d5" },
+"1e42915e-686e-49d4-bc09-835da1cbe3b7": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"195d0515-4d72-437d-97d1-30be39cc01ec": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"bb9130f0-97b0-4d20-9d2e-25f344342a21": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },  
+"d0555d8c-6722-4617-95d1-42aec7286104": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"ebc2176a-5d3f-4142-b621-d14ca8195870": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"4cf981bd-1d88-4fd7-bd18-2ea714296a01": { role: "coach", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"de10fb13-d45f-4d27-80c0-cbbb1a68651b": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"a24a496f-dcb6-495b-818f-28909d4974d1": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"d4177d27-217e-4919-9c87-659ce5cabf45": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"e02ba784-f680-4111-9447-de3b7b0c70d3": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
 
 //Vivacity Velocity
 
-"4a0b8a5f-fc8a-482b-bf4a-51f96fd63ca7": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"63b0dd23-35ae-4cb0-ba71-ed2cbe10bfc4": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"a3ed533b-358c-4525-ab2c-cbbf8d3f62af": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },  
-"4a0b8a5f-fc8a-482b-bf4a-51f96fd63ca":{ role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"2c1943f7-e9f0-4689-9772-f3c14cf32820": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"65e6a6e7-6acd-460d-82ec-515612763324": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"b8c5ce4c-b443-45bb-be3a-ba0ed0378b4d": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"ca4f5268-0fa9-43e2-be02-1b28e18a1dc1": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
-"45e962b5-f3d7-4f09-ba4a-374426c70403": { role: "coach", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" },
+"0271ae1e-2634-41e1-b09c-e6a1d821538b": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //slow
+"13bf13f0-472e-44f2-be42-b543e96328e3": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //mixvi
+"4a0b8a5f-fc8a-482b-bf4a-51f96fd63ca7": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //chan
+"e0146e86-3aaf-4257-a769-d9e18ccb71ed":{ role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //pip
+"eee284ff-cfa0-432c-b353-b10f4ae1b475": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //scram
+"2c1943f7-e9f0-4689-9772-f3c14cf32820": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //neon
+"2e18861a-d1a8-4db3-9562-001c8a2d5e97": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //clash
+"45e962b5-f3d7-4f09-ba4a-374426c70403": { role: "coach", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //deer
 
-//Vivacity Venom
+//Vivacity x Bakery
 
-"4d31affe-3b99-4749-a9ff-8c00162d9857": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"8eca7edc-543f-45d6-b410-e37fbe707291": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"78c6d83f-2362-4855-bd55-36967d27a8e4": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"161442f4-b9fd-43c2-b457-d733036b8dc2": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"03eab62f-e833-4cb9-9b65-123cc6c35ed3": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"cc25a96f-ce03-46ef-b146-230e5ebd34f9": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"2e30a13d-f0c1-45ef-bf6e-1b9b80e97cd5": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"6684ac51-8273-413d-b10f-7cb533412e86": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
-"ff65af52-8e79-48d4-a92d-3b902e23eea6": { role: "player", teamId: "5b6400ef-ceaf-4060-ac1a-bc2354a92999" },
+"272eca5e-4c36-4f16-8e3d-6eabd1a9ddf3": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //Hexxel4
+"67852816-3f67-47f0-bef6-91740935939f": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //jisang1
+"6b261c6d-0ff8-473b-90d1-f0647be64dda": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //ytb_
+"792f248f-01ec-42d2-a4af-afc73622e3f6": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //byncc
+"e9401831-39fe-4af6-91ee-c46546d3ca7a": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //BigAki
+"168be252-7e94-4011-ae64-2da99a15fa93": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //N20-
 
 //Vivacity Voidwalkers
 
-"d934f240-6019-4420-820f-c97fc5ba4b7a": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"86540537-24b9-400d-8644-ddd8f416cd28": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"a758c446-9c67-4714-a7ea-32437238ec77": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"b823cb17-257f-4ee4-a82e-eed47b84eed3": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"0e42242d-4769-4eb1-9441-bfe212e9e3f2": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"4d5bc30d-3429-4fda-b320-fd68acb4d2df": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"3036bb1b-2075-43c7-b5fe-42191c3e7203": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
-"a07572fa-d7f7-4745-a23d-9cee46ee0ae2": { role: "player", teamId: "8ebd59f8-4267-4c81-b72b-5dd63effcce9" },
+"de02e3ae-4c5f-4f1c-8c3a-2a298a3ed363": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //vaulti
+"8141b32c-e907-4b5a-8e78-8dde805f4f81": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //oriushunter
+"a04e4b2a-ea62-45ee-a438-071425c082ee": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //cajan
+"a86bb672-6fd1-4c32-9e35-b30c213670a1": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //hoodin1
+"e29c1c90-42b4-4043-b216-87c13f342d19": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //ineedaburrito
+"34a469e0-df82-4718-93cf-fa16258c407e": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //mazemel
+"aee06826-a75f-4576-8c09-cdb92cd58898": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //wlwooper
+"b4d088d6-7c72-4945-805d-60cc7ee38831": { role: "player", teamId: "985534cb-f2bb-4a1f-bbd1-5045884dc98e" }, //charbydisOW
 
 };

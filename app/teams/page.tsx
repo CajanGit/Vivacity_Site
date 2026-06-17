@@ -7,13 +7,14 @@ type Team = {
   name: string
   avatar: string;
   division: string;
+  region: string;
 };
 
 export default async function TeamsPage() {
   const teams:Team[] = await Promise.all(
-    TEAMS.map(async ({ teamId, division }) => {
+    TEAMS.map(async ({ teamId, division, region }) => {
       const faceitData = await getTeam(teamId)
-      return { ...faceitData, division }   
+      return { ...faceitData, division, region }   
     })
   );
 
@@ -61,6 +62,7 @@ export default async function TeamsPage() {
                 {team.name}
               </span>
               <p className="text-[10px]">{team.division}</p>
+              <p className="text-[8px]">{team.region}</p>
               <span className="text-[#00D4F5]/60 text-[11px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               View team →
               </span>
