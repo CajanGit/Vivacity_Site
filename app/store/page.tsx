@@ -99,46 +99,6 @@ export default function StorePage() {
 
         <div className="h-px bg-white/5" />
 
-    {/* ── Giveaway ───────────────── */}
-        <section className="px-6 py-16 max-w-2xl mx-auto">
-        <a  
-            href="https://x.com/VivacityOw/status/2055362810104680453?s=20"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex flex-col rounded-xl overflow-hidden border border-white/10 hover:border-[#00D4F5]/40 transition-colors bg-[#0a0b0c]"
-        >
-    {/* Prize image */}
-        <div className="relative w-full overflow-hidden">
-            <img
-                src="/images/Vivacity_Keychain.png"
-                alt="Giveaway prize"
-                className="w-full h-auto"
-            />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0c] via-[#0a0b0c]/20 to-transparent" />
-    </div>
-
-    {/* Card content */}
-    <div className="flex flex-col items-center text-center p-8">
-      <p className="font-aquire text-[16px] tracking-[0.18em] text-[#00D4F5] uppercase mb-2">
-        Active Giveaway
-      </p>
-      <h2 className="text-2xl font-medium text-white mb-2">
-        Vivacity Keychain
-      </h2>
-      <p className="text-sm text-gray-500 mb-6">
-        Coming Soon
-      </p>
-      <span className="inline-flex items-center gap-2 text-xs text-[#00D4F5] border border-[#00D4F5]/30 px-4 py-2 rounded-full group-hover:border-[#00D4F5] transition-colors">
-        <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-        Giveaway Details
-      </span>
-    </div>
-  </a>
-  
-</section>
-
 <div className="h-px bg-white/5" />
 
       <div className="h-px bg-white/5" />
