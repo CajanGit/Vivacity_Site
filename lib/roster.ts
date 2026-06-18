@@ -25,6 +25,18 @@ export const TEAM_ROSTER: Record<string, { role: "player" | "coach", teamId: str
 "2e18861a-d1a8-4db3-9562-001c8a2d5e97": { role: "player", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //clash
 "45e962b5-f3d7-4f09-ba4a-374426c70403": { role: "coach", teamId: "918cdb82-8180-4c4a-842a-4e425863237f" }, //deer
 
+//Vivacity Velociraptors
+
+"4188d3b0-e53f-44b9-a652-d831664321b9": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //notquide
+"0130d17a-6de2-4672-9e21-61e40ad1f613": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //sh1baa_
+"37ffbcf7-0e01-462f-bc8f-85daef8ed69c": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //VoltsA
+"87bd0699-aa1c-4fd6-894e-ba48764a5d84":{ role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //shigatsuu
+"f058dece-ee96-4c83-a854-54eca6f06fa1": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //sniperman0
+"3a75e1c8-5d7f-40f7-bf8c-284c01caa55d": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //dharmilk
+"47677b8b-d5cb-4cb1-833c-5f5d9da6ebb7": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Mrpeppar1337
+"a01d42d5-2cc6-4d96-a55e-e8cda6971dcb": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Lammet_
+"ca121cd9-4deb-4280-ad20-87ac66572c0f": { role: "coach", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Guffel_ow
+
 //Vivacity x Bakery
 
 "272eca5e-4c36-4f16-8e3d-6eabd1a9ddf3": { role: "player", teamId: "5217cb03-f75e-45fa-aa61-851dc51060b9" }, //Hexxel4
