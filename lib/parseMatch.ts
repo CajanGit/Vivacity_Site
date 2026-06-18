@@ -19,7 +19,7 @@ export function parseCalendarEvent(event: any) {
 
   const streamRawLine = lines.find((l: string) => l.includes("twitch.tv")) ?? null;
   // handle both plain URLs and Google-wrapped URLs
-  const streamUrlMatch = streamRawLine?.match(/q=(https:\/\/(?:www\.)?twitch\.tv[^&"]*)/) ?? null;
+  const streamUrlMatch = streamRawLine?.match(/q=(https:\/\/(?:www\.)?twitch\.tv[^&"<\s]*)/) ?? null;
   const streamUrl = streamUrlMatch ? streamUrlMatch[1] : streamRawLine;
 
   // console.log("streamRawLine:", streamRawLine);
