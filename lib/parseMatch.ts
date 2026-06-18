@@ -5,8 +5,13 @@ export function parseCalendarEvent(event: any) {
 
   if (!match) return null;
 
-  const description = event.description ?? "";
-  const lines = description.split("\n").map((l: string) => l.trim()).filter(Boolean);
+  const description = (event.description ?? "")
+  .split(/<br\s*\/?>|\n|\r\n/)           // split on <br> AND real newlines
+  .map((l: string) => l.replace(/<[^>]*>/g, '').trim())  // strip remaining HTML tags
+  .filter(Boolean)
+  .join("\n");                            // rejoin as clean newline-separated string
+
+  const lines = description.split("\n").filter(Boolean);
 
   // console.log("raw lines:", lines);
 
@@ -18,9 +23,12 @@ export function parseCalendarEvent(event: any) {
   } : null;
 
   const streamRawLine = lines.find((l: string) => l.includes("twitch.tv")) ?? null;
-  // handle both plain URLs and Google-wrapped URLs
-  const streamUrlMatch = streamRawLine?.match(/q=(https:\/\/(?:www\.)?twitch\.tv[^&"<\s]*)/) ?? null;
-  const streamUrl = streamUrlMatch ? streamUrlMatch[1] : streamRawLine;
+
+  const streamUrl = streamRawLine
+  ? (streamRawLine.match(/q=(https:\/\/(?:www\.)?twitch\.tv[^\s&"<]*)/))?.[1]  // Google-wrapped
+    ?? (streamRawLine.match(/(https:\/\/(?:www\.)?twitch\.tv[^\s<"]*)/)?.[1])   // plain URL
+    ?? null
+  : null;
 
   // console.log("streamRawLine:", streamRawLine);
 
