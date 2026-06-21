@@ -3,16 +3,14 @@ export const TEAM_ROSTER: Record<string, { role: "player" | "coach", teamId: str
 
 //Vivacity Flagship
 
-"1e42915e-686e-49d4-bc09-835da1cbe3b7": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"195d0515-4d72-437d-97d1-30be39cc01ec": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"bb9130f0-97b0-4d20-9d2e-25f344342a21": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },  
-"d0555d8c-6722-4617-95d1-42aec7286104": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"ebc2176a-5d3f-4142-b621-d14ca8195870": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"4cf981bd-1d88-4fd7-bd18-2ea714296a01": { role: "coach", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"de10fb13-d45f-4d27-80c0-cbbb1a68651b": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"a24a496f-dcb6-495b-818f-28909d4974d1": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"d4177d27-217e-4919-9c87-659ce5cabf45": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
-"e02ba784-f680-4111-9447-de3b7b0c70d3": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" },
+"1e42915e-686e-49d4-bc09-835da1cbe3b7": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //careow
+"195d0515-4d72-437d-97d1-30be39cc01ec": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //BogiBingler
+"bb9130f0-97b0-4d20-9d2e-25f344342a21": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //Kermaa
+"d0555d8c-6722-4617-95d1-42aec7286104": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //Gingertwat2
+"ebc2176a-5d3f-4142-b621-d14ca8195870": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //ajmr
+"4cf981bd-1d88-4fd7-bd18-2ea714296a01": { role: "coach", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //smawl
+"de10fb13-d45f-4d27-80c0-cbbb1a68651b": { role: "player", teamId: "70c5fe9d-1af4-4f3a-b384-16a111649a78" }, //Gemini2
+"edb47502-4e9d-4d4a-b73f-3725e41e50e4": { role: "player", teamId: "c7d5d5d7-e311-43fb-b71b-60b8d35e6ca7" }, //PutterOw
 
 //Vivacity Velocity
 

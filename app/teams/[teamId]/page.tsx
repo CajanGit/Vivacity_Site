@@ -38,10 +38,26 @@ const coaches = filteredMembers.filter(
   (member) => TEAM_ROSTER[member.user_id].role === "coach"
 );
 
+  console.log("raw titles:", scheduleData.items?.map((e: any) => e.summary));
+  console.log("raw calendar items:", scheduleData.items?.length ?? "no items field — check for error:", scheduleData.error);
+
+  // --- STAGE 2: did parsing succeed? ---
+const parsedEvents = scheduleData.items?.map(parseCalendarEvent) ?? [];
+console.log("parsed (non-null) events:", parsedEvents.filter(Boolean).length, "out of", parsedEvents.length);
+console.log("teamNames found in parsed events:", parsedEvents.map((m: any) => m?.teamName));
+
+// --- STAGE 3: did the team-name filter match? ---
+const targetCalendarName = TEAMS.find(t => t.teamId === teamId)?.calendarName;
+console.log("this page's teamId:", teamId, "-> looking for calendarName:", JSON.stringify(targetCalendarName));
+
+
+
 const teamMatches = scheduleData.items
   ?.map(parseCalendarEvent)
   .filter((match: any) => match?.teamName === TEAMS.find(t => t.teamId === teamId)?.calendarName)
   ?? [];
+
+  console.log("teamMatches after filter:", teamMatches.length);
 
 const upcomingMatches = teamMatches
   .filter((match: any) => new Date(match.scheduledAt) > now)
