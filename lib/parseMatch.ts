@@ -1,6 +1,9 @@
 // lib/parseMatch.ts
 export function parseCalendarEvent(event: any) {
-  const title = event.summary; // e.g. "[Vivacity] vs Enemy Team"
+  const title = event.summary;   // e.g. "[Vivacity] vs Enemy Team"
+  
+  if (!title) return null;
+
   const match = title.match(/\[(.+?)\]\s*vs\s*(.+)/);
 
   if (!match) return null;
