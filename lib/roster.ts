@@ -34,6 +34,7 @@ export const TEAM_ROSTER: Record<string, { role: "player" | "coach", teamId: str
 "47677b8b-d5cb-4cb1-833c-5f5d9da6ebb7": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Mrpeppar1337
 "a01d42d5-2cc6-4d96-a55e-e8cda6971dcb": { role: "player", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Lammet_
 "ca121cd9-4deb-4280-ad20-87ac66572c0f": { role: "coach", teamId: "cc5cddf9-7c61-44e2-b310-55807e618d92" }, //Guffel_ow
+"be24eb87-de8d-4d2d-bbe7-c12f4f1515ae": { role: "coach", teamId: "cc5cddf9-755807e618d92c61-44e2-b310-" }, //-Dawit/SLZ
 
 //Vivacity x Bakery
 
