@@ -1,7 +1,15 @@
 // lib/roster.ts
 export const TEAM_ROSTER: Record<string, { role: "player" | "coach", teamId: string }> = {
 
-//Vivacity Flagship
+//Truth Nuke\
+
+"55577f9f-c548-4ad5-83e9-d3868aebbb89": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //Hertzvl
+"045d7c80-79fb-4822-8085-fdd0267292e2": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //SuperPizza96
+"3706e5df-6ed9-4d35-86e0-1cccda12f5ed": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //Astosia
+"619c43d1-0c06-44c8-8d10-79cc26358a81": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //TenacityOW
+"9bf3bf9a-f032-408f-8014-bc02f138a4c0": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //QwertyTumor
+"713c544e-a373-4a77-a8b7-ffd0720a95d2": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //Kernmaster
+"f46f2245-44b3-460f-ba2c-39fa4bf249a4": { role: "player", teamId: "dc664b88-447e-4cfe-8a2e-d067a212563a" }, //wbat
 
 
 //Vivacity Velociraptors
