@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link href="/teams" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Teams</Link>
           <Link href="/socials" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Socials</Link>
           <Link href="/store" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Store</Link>
-          <Link href="/coaching" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Coaching</Link>
+          {/* <Link href="/coaching" className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Coaching</Link> */}
           <AuthButton />
         </div>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/teams" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Teams</Link>
           <Link href="/socials" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Socials</Link>
           <Link href="/store" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors ">Store</Link>
-          <Link href="/coaching" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Coaching</Link>
+          {/* <Link href="/coaching" onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-[#00D4F5] text-lg transition-colors overflow-hidden">Coaching</Link> */}
         <div className="w-full h-px bg-white/10" />
         <AuthButton onNavigate={() => setIsOpen(false)} />
         </div>

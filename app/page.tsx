@@ -179,7 +179,7 @@ export default async function Home() {
         </section>
 
 
-        {/* Coaching */}
+        {/* Coaching
         <section className="relative w-full flex items-end overflow-hidden group" 
           style={{aspectRatio: '3 / 1', minHeight: '300px'}}
         >
@@ -207,7 +207,7 @@ export default async function Home() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>
-        </section>
+        </section> */}
       </div>
 
 
